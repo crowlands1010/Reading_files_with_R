@@ -1,3 +1,6 @@
+##script for downloading data from internet
+##this file is specific to a lecture on coursera, but can be modified.
+
 if (!file.exists("data")) {
   dir.create("data")
 }
