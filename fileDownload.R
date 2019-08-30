@@ -5,6 +5,6 @@ if (!file.exists("data")) {
   dir.create("data")
 }
 
-fileUrl <- "https://data.baltimorecity.gov/Transportation/Fixed-Speed-Cameras/aqgr-xx9h/data" ##testdata
+fileUrl <- "https://data.baltimorecity.gov/api/views/aqgr-xx9h/rows.csv?accessType=DOWNLOAD" ##testdata
 download.file(fileUrl,destfile="./data/cameras.csv") ##teststorage
 list.files("./data")
