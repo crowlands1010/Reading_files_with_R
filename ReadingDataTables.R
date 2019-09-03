@@ -179,3 +179,14 @@ head(DT,3)
 ##99: a -0.93830821
 ##100: a  0.62753159
 ##x           y
+##> big_df <- data.frame(x=rnorm(1E6),y=rnorm(1E6))
+##> file <- tempfile()
+##> write.table(big_df,file=file,row.names=FALSE,col.names=TRUE,sep="\t",quote=FALSE)
+##> system.time(fread(file))
+##user  system elapsed 
+##0.08    0.03    0.22 
+##> 
+##  > 
+##  > system.time(read.table(file,header=TRUE,sep="\t"))
+##user  system elapsed 
+##3.98    0.14    4.12 
